@@ -1,34 +1,42 @@
+import {
+  Avatar,
+  Description,
+  Item,
+  Label,
+  Location,
+  Name,
+  Profile,
+  ProfileContainer,
+  Quantity,
+  Stats,
+  Tag,
+} from './ProfileCard.styled';
 
-export const ProfileCard = ({username, tag, location, avatar, stats}) =>
-{
-    return (
-<div class="profile">
-  <div class="description">
-    <img
-      src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-      alt="User avatar"
-      class="avatar"
-    />
-                <p class="name">{username}</p>
-    <p class="tag">{tag}</p>
-    <p class="location">Salvador, Brasil</p>
-  </div>
-
-  <ul class="stats">
-    <li>
-      <span class="label">Followers</span>
-      <span class="quantity">1000</span>
-    </li>
-    <li>
-      <span class="label">Views</span>
-      <span class="quantity">2000</span>
-    </li>
-    <li>
-      <span class="label">Likes</span>
-      <span class="quantity">3000</span>
-    </li>
-  </ul>
-</div>
-
-    )
-}
+export const ProfileCard = ({ username, tag, location, avatar, stats }) => {
+  return (
+    <ProfileContainer>
+      <Profile>
+                      <Description>
+        <Avatar src={avatar} alt="User avatar" class="avatar" />
+          <Name>{username}</Name>
+          <Tag>{tag}</Tag>
+          <Location>{location}</Location>
+        </Description>
+      </Profile>
+      <Stats>
+        <Item>
+          <Label>Followers</Label>
+          <Quantity>{stats.followers}</Quantity>
+        </Item>
+        <Item>
+          <Label>Views</Label>
+          <Quantity>{stats.views}</Quantity>
+        </Item>
+        <Item>
+          <Label>Likes</Label>
+          <Quantity>{stats.likes}</Quantity>
+        </Item>
+      </Stats>
+    </ProfileContainer>
+  );
+};
