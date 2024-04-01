@@ -1,17 +1,18 @@
 import PropTypes from 'prop-types';
-import { StatisticsCard } from './StatisticsCard';
+import { StatisticsCard } from '../StatisticsCard/StatisticsCard';
+import { StatisticsSection, Title } from './StatisticsList.styled';
 
 export const StatisticsList = ({ statistics }) => {
   return (
-    <section class="statistics">
-      <h2 class="title">Upload stats</h2>
+    <StatisticsSection>
+      <Title>Upload stats</Title>
 
       <ul class="stat-list">
         {statistics.map(({ id, label, percentage }) => (
           <StatisticsCard key={id} label={label} percentage={percentage} />
         ))}       
       </ul>
-    </section>
+    </StatisticsSection>
   );
 };
 

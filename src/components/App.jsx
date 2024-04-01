@@ -1,7 +1,7 @@
 import { ProfileCard } from "./ProfileCard/ProfileCard";
 import user from "./ProfileCard/user.json";
 import statistics from './/Statistics/data.json'
-import { StatisticsList } from "./Statistics/StatisticsList";
+import { StatisticsList } from "./Statistics/StatisticsList/StatisticsList";
 
 export const App = () => {
   return (

@@ -1,10 +1,15 @@
 import PropTypes from 'prop-types';
+import { getRandomHexColor } from '../GetColor';
 
 export const StatisticsCard
     = ({ label, percentage, }) =>
     {
         return (
-            <li class="item">
+            <li class="item"
+                          style={{
+                backgroundColor: getRandomHexColor(),
+              }}
+            >
                 <span class="label">{label}</span>
                 <span class="percentage">{percentage}</span>
             </li>
