@@ -1,6 +1,8 @@
 import { ProfileCard } from "./ProfileCard/ProfileCard";
 import user from "./ProfileCard/user.json";
+import statistics from './/Statistics/data.json'
 import { Statistics } from "./Statistics/Statistics";
+import { StatisticsList } from "./Statistics/StatisticsList";
 
 export const App = () => {
   return (
@@ -14,7 +16,8 @@ export const App = () => {
         color: '#010101'
       }}
     >
-<Statistics/>
+      {/* <Statistics /> */}
+      <StatisticsList statistics={statistics} />
 {/* <ProfileCard   username={user.username}
   tag={user.tag}
   location={user.location}
