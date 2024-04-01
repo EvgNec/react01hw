@@ -14,3 +14,14 @@ export const StatisticsList = ({ statistics }) => {
     </section>
   );
 };
+
+StatisticsList.propTypes = {
+    statistics: PropTypes.arrayOf(
+        PropTypes.exact({
+            id: PropTypes.string.isRequired,
+            label: PropTypes.string.isRequired,
+            percentage    : PropTypes.string.isRequired,
+        })    
+    )
+}
+

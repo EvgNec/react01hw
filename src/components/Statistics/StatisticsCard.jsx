@@ -9,4 +9,9 @@ export const StatisticsCard
                 <span class="percentage">{percentage}</span>
             </li>
         );
-}
+    }
+
+StatisticsCard.propTypes = {
+    label: PropTypes.string.isRequired,
+    percentage: PropTypes.number.isRequired,
+    }
