@@ -7,7 +7,12 @@ export const FriendsList = ({ friends }) => {
 
       <ul class="stat-list">
           {friends.map(({ id, avatar, name, isOnline }) => (
-          <StatisticsCard key={id} label={label} percentage={percentage} />
+            //   <StatisticsCard key={id} label={label} percentage={percentage} />
+              <li key={id}>
+                  <span>{isOnline }</span>
+                  <img src={avatar} alt={name} width="48" />
+  <p>{name}</p>
+</li>
         ))} 
       </ul>
     </StatisticsSection>
