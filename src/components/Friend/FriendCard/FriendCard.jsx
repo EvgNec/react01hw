@@ -11,8 +11,6 @@ export const FriendCard
 </li>
         );
     }
-
-
     
 FriendCard.propTypes = {
   name: PropTypes.string.isRequired,
