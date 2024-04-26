@@ -4,7 +4,8 @@ import statistics from './/Statistics/data.json'
 import friends from './Friend/friends.json'
 import { StatisticsList } from "./Statistics/StatisticsList/StatisticsList";
 import { FriendsList } from "./Friend/FriendList/FriendList";
-
+import { TransactionsList } from "./Transactions/TransactionsList";
+import transactions from './Transactions/transactions.json'
 export const App = () => {
   return (
     <div
@@ -24,6 +25,7 @@ export const App = () => {
   avatar={user.avatar}
   stats={user.stats}/> */}
       {/* <FriendsList friends={friends}/> */}
+      <TransactionsList transactions={transactions} />
     </div>
   );
 };
