@@ -18,13 +18,13 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      {/* <StatisticsList statistics={statistics} />
+       <StatisticsList statistics={statistics} />
 <ProfileCard   username={user.username}
   tag={user.tag}
   location={user.location}
   avatar={user.avatar}
-  stats={user.stats}/> */}
-      {/* <FriendsList friends={friends}/> */}
+  stats={user.stats}/> 
+      <FriendsList friends={friends}/>
       <TransactionsList transactions={transactions} />
     </div>
   );
